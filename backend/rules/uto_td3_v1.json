@@ -1,0 +1,28 @@
+{
+  "ruleset_id": "uto-td3-rules",
+  "version": "1.0.0",
+  "effective_from": "2026-01-01",
+  "description": "Demo ruleset for fictional UTO (Utopia) TD3 passports. Real issuer rules would be versioned with effective dates.",
+  "issuer_code": "UTO",
+  "template_id": "UTO-TD3-v1",
+  "max_validity_years": 10,
+  "min_validity_days": 30,
+  "max_age_years": 110,
+  "ocr": {
+    "min_field_confidence": 0.80,
+    "min_mrz_confidence": 0.85
+  },
+  "quality": {
+    "min_card_width_px_fail": 760,
+    "min_card_width_px_review": 1000,
+    "blur_laplacian_fail": 55.0,
+    "blur_laplacian_review": 110.0,
+    "glare_fraction_fail": 0.06,
+    "glare_fraction_review": 0.015
+  },
+  "forensics": {
+    "zscore_review": 3.5,
+    "min_score_review": 0.25,
+    "note": "Baseline indicators only. Review aids, not proof."
+  }
+}
